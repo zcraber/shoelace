@@ -506,7 +506,9 @@ describe('<sl-select>', () => {
     expect(displayInput.value).to.equal('Option 1');
 
     option.textContent = 'updated';
-    await oneEvent(option, 'slotchange');
+
+    await aTimeout(0);
+    await option.updateComplete;
     await el.updateComplete;
 
     expect(displayInput.value).to.equal('updated');
