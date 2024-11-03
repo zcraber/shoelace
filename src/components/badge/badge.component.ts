@@ -15,6 +15,8 @@ import type { CSSResultGroup } from 'lit';
  * @slot - The badge's content.
  *
  * @csspart base - The component's base wrapper.
+ * 
+ * @cssproperty --pulse-color - The color of the pulse.
  */
 export default class SlBadge extends ShoelaceElement {
   static styles: CSSResultGroup = [componentStyles, styles];
